@@ -19,8 +19,10 @@ else()
 endif()
 
 add_revision(numpy
-  URL "http://paraview.org/files/dependencies/numpy-1.6.2.tar.gz"
-  URL_MD5 95ed6c9dcc94af1fc1642ea2a33c1bba)
+  GIT_REPOSITORY "https://github.com/mathstuf/numpy.git"
+  GIT_TAG "cmake/1.9.0")
+  #URL "http://paraview.org/files/dependencies/numpy-1.6.2.tar.gz"
+  #URL_MD5 95ed6c9dcc94af1fc1642ea2a33c1bba)
 
 foreach (fftw3kind float double long quad)
   add_revision(fftw3${fftw3kind}
